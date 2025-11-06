@@ -15,11 +15,16 @@ import java.util.TreeMap;
 public class Main {
   public static void main(String[] args) throws Exception {
 
-    // Get user input
-    ArrayList<String> userInput = UI.getInput();
-    String dataFileName = userInput.get(0);
-    String statesFileName = userInput.get(1);
-    String loggerFileName = userInput.get(2);
+
+    if (args.length != 3) {
+      UI.display("Invalid number of runtime arguments: " + args.length);
+      return;
+    }
+
+    // Get user input from runtime args
+    String dataFileName = args[0];
+    String statesFileName = args[1];
+    String loggerFileName = args[2];
 
     // Read files and initialize logger
     JSONArray tweets, states;
