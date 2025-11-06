@@ -12,11 +12,11 @@ public class TweetFilter {
       for (String word : text.split(" ")) {
         word = word.toLowerCase();
         if (word.contains("flu")){
-          if (word.equals("flu")
-              || word.equals("#flu")
-              || (word.length() == 4
-                  && word.substring(0,3).equals("flu")
-                  && ( word.charAt(3) < 'a' ||  word.charAt(3) > 'z'))) {
+          if (word.equals("flu") || word.equals("#flu")) {
+            filteredJsonArray.add(obj);
+            break;
+          }
+          if (word.length() > 3 && word.substring(0,3).equals("flu") && (word.charAt(3) < 'a' ||  word.charAt(3) > 'z')) {
             filteredJsonArray.add(obj);
             break;
           }
