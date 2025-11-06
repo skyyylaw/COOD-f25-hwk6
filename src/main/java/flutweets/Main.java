@@ -29,13 +29,13 @@ public class Main {
     // Read files and initialize logger
     JSONArray tweets, states;
     try {
-      tweets = JsonReader.readJsonFile(dataFileName);
+      tweets = JsonReader.readTweetsJson(dataFileName);
     } catch (Exception e) {
       UI.display("Error reading file: " + dataFileName);
       return;
     }
     try {
-      states = JsonReader.readJsonFile(statesFileName);
+      states = JsonReader.readStatesJson(statesFileName);
     } catch (Exception e) {
       UI.display("Error reading file: " + statesFileName);
       return;
