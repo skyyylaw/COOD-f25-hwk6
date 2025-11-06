@@ -12,7 +12,7 @@ import org.json.simple.JSONObject;
 import java.util.ArrayList;
 import java.util.TreeMap;
 
-public class main {
+public class Main {
   public static void main(String[] args) throws Exception {
 
     // Get user input
@@ -28,14 +28,12 @@ public class main {
     } catch (Exception e) {
       UI.display("Error reading file: " + dataFileName);
       return;
-//      throw new RuntimeException(e);
     }
     try {
       states = JsonReader.readJsonFile(statesFileName);
     } catch (Exception e) {
       UI.display("Error reading file: " + statesFileName);
       return;
-//      throw new RuntimeException(e);
     }
 
     // Filter for flu tweets
@@ -57,7 +55,6 @@ public class main {
     } catch (RuntimeException e) {
       UI.display("Error creating log file: " + loggerFileName);
       return;
-//      throw new RuntimeException(e);
     }
 
     // Log each flu tweet with state origin
@@ -69,8 +66,9 @@ public class main {
       } catch (RuntimeException e) {
         UI.display("Error when loggering this message: " + message);
         return;
-//        throw new RuntimeException(e);
       }
     }
+
+    logger.close();
   }
 }
