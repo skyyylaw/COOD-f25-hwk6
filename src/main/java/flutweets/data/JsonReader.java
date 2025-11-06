@@ -69,19 +69,4 @@ public class JsonReader {
     }
     return jsonArray;
   }
-
-//  public static void main(String[] args) {
-//    JSONArray jsonArray;
-//    try {
-//      jsonArray = JsonReader.readJsonFile("flu_tweets.json");
-//    } catch (Exception e) {
-//      System.out.println(e.getMessage());
-//      throw new RuntimeException(e);
-//    }
-////    System.out.println(jsonArray);
-//    for (Object obj : jsonArray) {
-//      JSONObject jo = (JSONObject) obj;
-//      System.out.println(jo.get("text"));
-//    }
-//  }
 }

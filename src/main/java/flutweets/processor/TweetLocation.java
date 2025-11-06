@@ -32,15 +32,4 @@ public class TweetLocation {
     }
     return result;
   }
-
-//  public static void main(String[] args) {
-//    try {
-//      JSONArray filteredTweets = TweetFilter.fluTweetsfilter(JsonReader.readJsonFile("flu_tweets.json"));
-//      JSONArray states = JsonReader.readJsonFile("states.json");
-//      JSONArray locationAdded = addLocation(filteredTweets, states);
-//      System.out.println(locationAdded);
-//    } catch (Exception e) {
-//      throw new RuntimeException(e);
-//    }
-//  }
 }

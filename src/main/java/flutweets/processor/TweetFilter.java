@@ -25,12 +25,4 @@ public class TweetFilter {
     }
     return filteredJsonArray;
   }
-
-//  public static void main(String[] args) {
-//    try {
-//      System.out.println(fluTweetsfilter(JsonReader.readJsonFile("flu_tweets.json")));
-//    } catch (Exception e) {
-//      throw new RuntimeException(e);
-//    }
-//  }
 }
